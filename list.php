@@ -1,13 +1,7 @@
 <?php
-if(isset($_POST['submit'])){
-	getfiles($_POST['url']);
-	//$str = "isi.xml";
-	// if(preg_match("/.xml/",$str)){
- //    echo '成功';
-	// }else{
- //    echo '没有内容';
-//	}
-}
+	if(isset($_POST['submit'])){
+		getfiles($_POST['url']);
+	}
 	function dealxml($url)
 	{
 		$content = simplexml_load_file($url);
@@ -15,7 +9,6 @@ if(isset($_POST['submit'])){
 		return $name;
 	}
 	
-///////////////////////////////////////////////
 	function getfiles($path){ 
 	foreach(scandir($path) as $afile)
 	{
@@ -29,9 +22,7 @@ if(isset($_POST['submit'])){
 			}else{
 
 			}
-		//echo $path.'/'.$afile.'<br />'; 
-		//echo $afile.'<br />';
-		      } 
+		   } 
 		} 
 	} 
 	
